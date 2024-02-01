@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    text-align: center;
+  }
+
+  .food-car {
+    width: 180px;
+    height: 180px;
+    background-image: url("../../Images/carrito.png");
+    background-size: cover;
+  }
+
+  .row {
+    margin-bottom: 20px;
+  }
+  
+  .icon {
+    width: 50px; /* Ajusta el tamaño según tus necesidades */
+    height: 50px; /* Ajusta el tamaño según tus necesidades */
+  }
+  
+  .search-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .search-box {
+    width: 200px;
+    padding: 8px 30px 8px 8px; /* Ajusta el padding según tus necesidades */
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Ajusta el desplazamiento según tus necesidades */
+    transform: translateY(-50%);
+    width: 20px; /* Ajusta el ancho del icono según tus necesidades */
+    height: 20px; /* Ajusta la altura del icono según tus necesidades */
+    background-image: url("../../Images/lupa.png"); /* Ruta a tu icono */
+    background-size: cover;
+  }
+  
+  .search-button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007BFF; /* Puedes ajustar el color según tus preferencias */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Añade estilos adicionales según sea necesario */
+  
