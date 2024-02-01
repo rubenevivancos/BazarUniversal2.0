@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  .product-container {
+    display: flex;
+    max-width: 600px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .product-image {
+    flex: 0 0 150px;
+    overflow: hidden;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  
+  .product-image img {
+    width: 100%;
+    border-radius: 50%;
+  }
+  
+  .product-details {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .product-title {
+    font-weight: bold;
+    margin-bottom: 8px; /* Espacio entre el título y la descripción */
+  }
+  
+  .product-description {
+    margin-bottom: 8px; /* Espacio entre la descripción y el precio */
+  }
+  
+  .product-price-and-rating {
+    display: flex;
+    flex-direction: row; /* Ahora en la misma fila */
+    align-items: center;
+    margin-top: 8px; /* Espacio entre el precio y las estrellas */
+  }
+  
+  .product-price {
+    margin-right: 8px; /* Espacio entre el precio y las estrellas */
+  }
+  
+  .product-rating {
+    display: flex;
+    align-items: center;
+  }
+  
+  .star {
+    color: #ffd700;
+    margin-right: 4px;
+  }
+
+  /* Estilos para la estrella activa */
+  .star-active {
+    color: #ffd700; /* Color activo de la estrella */
+    overflow: hidden;
+    display: inline-block;
+  }
