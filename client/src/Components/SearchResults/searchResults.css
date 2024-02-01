@@ -1,0 +1,10 @@
+
+.category-list {
+    display: flex;
+    flex-direction: row;
+}
+  
+.category-list > div {
+    margin-right: 10px;
+    color: red;
+}
