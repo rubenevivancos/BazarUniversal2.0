@@ -56,6 +56,31 @@ export default function HomeWithSearchBox() {
             </nav>
             {/* NAVBAR FIN */}
 
+
+            {/* CONTENIDO INICIO */}
+            <section>
+                <div className="bg-primary text-white p-3 mt-3">
+                    <p>
+                        Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a 
+                        full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.
+                    </p>
+                </div>
+                <div className="bg-success text-white p-3 mt-3">
+                    <p>
+                        Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a 
+                        full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.
+                    </p>
+                </div>
+                <div className="bg-dark text-white p-3 mt-3">
+                    <p>
+                        Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a 
+                        full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.
+                    </p>
+                </div>
+            </section>
+            {/* CONTENIDO FIN */}
+
+
             {/* CARD INICIO */}
             <div className="card" style={{ width: '18rem' }}>
                 <img src="..." className="card-img-top" alt="..."/>
