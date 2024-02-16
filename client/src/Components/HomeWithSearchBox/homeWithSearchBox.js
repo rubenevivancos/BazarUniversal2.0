@@ -56,6 +56,31 @@ export default function HomeWithSearchBox() {
             </nav>
             {/* NAVBAR FIN */}
 
+            {/* GRILLAS INICIO */}
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col">
+                        <p>
+                            Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a 
+                            full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p>
+                            Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a 
+                            full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p>
+                            Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a 
+                            full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {/* GRILLAS FIN */}
+
 
             {/* CONTENIDO INICIO */}
             <section>
