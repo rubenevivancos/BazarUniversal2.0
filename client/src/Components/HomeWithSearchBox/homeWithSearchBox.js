@@ -56,30 +56,33 @@ export default function HomeWithSearchBox() {
             </nav>
             {/* NAVBAR FIN */}
 
+
+
             {/* GRILLAS INICIO */}
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col">
-                        <p>
-                            Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a 
-                            full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.
-                        </p>
+            <div className="container text-center">
+                <div className="row">
+                    <div className="col">
+                    1 of 2
                     </div>
-                    <div class="col">
-                        <p>
-                            Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a 
-                            full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.
-                        </p>
+                    <div className="col">
+                    2 of 2
                     </div>
-                    <div class="col">
-                        <p>
-                            Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a 
-                            full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.
-                        </p>
+                </div>
+                <div className="row">
+                    <div className="col">
+                    1 of 3
+                    </div>
+                    <div className="col">
+                    2 of 3
+                    </div>
+                    <div className="col">
+                    3 of 3
                     </div>
                 </div>
             </div>
             {/* GRILLAS FIN */}
+
+
 
 
             {/* CONTENIDO INICIO */}
@@ -106,6 +109,9 @@ export default function HomeWithSearchBox() {
             {/* CONTENIDO FIN */}
 
 
+
+
+
             {/* CARD INICIO */}
             <div className="card" style={{ width: '18rem' }}>
                 <img src="..." className="card-img-top" alt="..."/>
@@ -118,8 +124,12 @@ export default function HomeWithSearchBox() {
             {/* CARD FIN */}
 
 
+
+
             <h1>Aprendiendo Bootstrap</h1>
             <button type="button" className="btn btn-primary">Shaka de Virgo</button>
+
+
         </div>
         /* 
         <div className="container">
