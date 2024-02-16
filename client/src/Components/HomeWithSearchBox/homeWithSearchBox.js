@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 
 import { productSearch } from "../../Redux/Actions/productAction";
-import './homeWithSearchBox.css';
+//import './homeWithSearchBox.css';
 
 export default function HomeWithSearchBox() {
     const dispatch = useDispatch();
@@ -28,6 +28,11 @@ export default function HomeWithSearchBox() {
 
 
     return(
+        <div>
+            <h1>Aprendiendo Bootstrap</h1>
+            <button type="button" className="btn btn-primary">Shaka de Virgo</button>
+        </div>
+        /* 
         <div className="container">
             <div className="row">
                 <div className="food-car"></div>
@@ -45,5 +50,6 @@ export default function HomeWithSearchBox() {
                 <button className="search-button" onClick={handleSubmit}>Buscar</button>
             </div>
         </div>
+        */
     )
 }
