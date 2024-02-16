@@ -62,21 +62,21 @@ export default function HomeWithSearchBox() {
             <div className="container text-center">
                 <div className="row">
                     <div className="col">
-                    1 of 2
+                        1 of 2
                     </div>
                     <div className="col">
-                    2 of 2
+                        2 of 2
                     </div>
                 </div>
                 <div className="row">
                     <div className="col">
-                    1 of 3
+                        1 of 3
                     </div>
                     <div className="col">
-                    2 of 3
+                        2 of 3
                     </div>
                     <div className="col">
-                    3 of 3
+                        3 of 3
                     </div>
                 </div>
             </div>
@@ -128,6 +128,19 @@ export default function HomeWithSearchBox() {
 
             <h1>Aprendiendo Bootstrap</h1>
             <button type="button" className="btn btn-primary">Shaka de Virgo</button>
+
+
+            {/* FOOTER INICIO */}
+            <section>
+                <div className="container bg-dark mt-5 p-5 text-white">
+                    <div className="row">
+                        <div className="col">Shaka de Virgo</div>
+                        <div className="col">Camus de Acuario</div>
+                        <div className="col">Aioros de Sagitario</div>
+                    </div>
+                </div>
+            </section>
+            {/* FOOTER FIN */}
 
 
         </div>
