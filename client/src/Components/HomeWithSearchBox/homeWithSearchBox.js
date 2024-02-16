@@ -132,7 +132,7 @@ export default function HomeWithSearchBox() {
 
             {/* FOOTER INICIO */}
             <section>
-                <div className="container bg-dark mt-5 p-5 text-white">
+                <div className="bg-dark mt-5 p-5 text-white">
                     <div className="row">
                         <div className="col">Shaka de Virgo</div>
                         <div className="col">Camus de Acuario</div>
