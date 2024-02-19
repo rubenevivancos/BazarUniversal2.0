@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from 'react-router-dom';
+import { Container, Row, Col, Image, InputGroup, FormControl, Button } from 'react-bootstrap';
 
 import { productSearch } from "../../Redux/Actions/productAction";
+import imagen from '../../Images/carrito.png';
+import lupaIcon from '../../Images/lupa.png';
 //import './homeWithSearchBox.css';
 
 export default function HomeWithSearchBox() {
@@ -28,122 +31,42 @@ export default function HomeWithSearchBox() {
 
 
     return(
-        <div>
-            {/* NAVBAR INICIO */}
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
-                <div className="container-fluid">
-                    <a className="navbar-brand" href="#">Navbar</a>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarNav">
-                        <ul className="navbar-nav">
-                            <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Features</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Pricing</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link disabled" aria-disabled="true">Disabled</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            {/* NAVBAR FIN */}
+        <>
+            <Container>
+                <Row className="mb-4">
+                    <Col>
+                        <Image src={imagen} className="img-centered" style={{ width: "300px" }}/>
+                    </Col>
+                </Row>
+                <Row className="mb-4">
+                    <Col>
+                        <h1 className="text-center">Bazar Universal</h1>
+                    </Col>
+                </Row>
+                <Row style={{ justifyContent: "center" }}>
+                    <Col>
+                        <InputGroup className="mb-4">
+                            <FormControl
+                                placeholder="smartphones, laptops..."
+                                aria-label="Búsqueda"
+                                aria-describedby="basic-addon2"
+                                onChange={handleInput}
+                            />
+                            <img src={lupaIcon} alt="Lupa" />
+                        </InputGroup>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col className="text-center">
+                        <Button variant="primary" onClick={handleSubmit}>
+                            Buscar
+                        </Button>
+                    </Col>
+                </Row>
+            </Container>
+        </>
 
 
-
-            {/* GRILLAS INICIO */}
-            <div className="container text-center">
-                <div className="row">
-                    <div className="col">
-                        1 of 2
-                    </div>
-                    <div className="col">
-                        2 of 2
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        1 of 3
-                    </div>
-                    <div className="col">
-                        2 of 3
-                    </div>
-                    <div className="col">
-                        3 of 3
-                    </div>
-                </div>
-            </div>
-            {/* GRILLAS FIN */}
-
-
-
-
-            {/* CONTENIDO INICIO */}
-            <section>
-                <div className="bg-primary text-white p-3 mt-3">
-                    <p>
-                        Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a 
-                        full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.
-                    </p>
-                </div>
-                <div className="bg-success text-white p-3 mt-3">
-                    <p>
-                        Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a 
-                        full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.
-                    </p>
-                </div>
-                <div className="bg-dark text-white p-3 mt-3">
-                    <p>
-                        Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a 
-                        full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.
-                    </p>
-                </div>
-            </section>
-            {/* CONTENIDO FIN */}
-
-
-
-
-
-            {/* CARD INICIO */}
-            <div className="card" style={{ width: '18rem' }}>
-                <img src="..." className="card-img-top" alt="..."/>
-                <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" className="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            {/* CARD FIN */}
-
-
-
-
-            <h1>Aprendiendo Bootstrap</h1>
-            <button type="button" className="btn btn-primary">Shaka de Virgo</button>
-
-
-            {/* FOOTER INICIO */}
-            <section>
-                <div className="bg-dark mt-5 p-5 text-white">
-                    <div className="row">
-                        <div className="col">Shaka de Virgo</div>
-                        <div className="col">Camus de Acuario</div>
-                        <div className="col">Aioros de Sagitario</div>
-                    </div>
-                </div>
-            </section>
-            {/* FOOTER FIN */}
-
-
-        </div>
         /* 
         <div className="container">
             <div className="row">
