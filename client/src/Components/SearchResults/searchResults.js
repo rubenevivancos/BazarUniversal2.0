@@ -13,6 +13,28 @@ export default function SearchResults() {
 
     if(listProducts.length){
         return(
+            <>
+                <div>
+                    <div>
+                        <input type="text" placeholder="laptops, smartphones, ..."/>
+                        <div></div>
+                    </div>
+                </div>
+                <div>Resultados de la busqueda de " {productToSearch} ": {listProducts.length}</div>
+                <div className="category-list">
+                    {categoriesWithCount.map((cat) => (
+                        <div key={cat.category}>{cat.category} - {cat.count}</div>
+                    ))}
+                </div>
+                <div>
+                    { listProducts.map( product => <Link to={"/items/"+product.id} key={product.id}><Product product={product} /></Link>) }
+                </div>
+            </>
+        )
+    }
+}
+
+/*
             <div>
                 <div>
                     <div>
@@ -30,6 +52,4 @@ export default function SearchResults() {
                     { listProducts.map( product => <Link to={"/items/"+product.id} key={product.id}><Product product={product} /></Link>) }
                 </div>
             </div>
-        )
-    }
-}
+*/

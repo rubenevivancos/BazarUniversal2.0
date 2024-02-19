@@ -6,7 +6,8 @@ import { Container, Row, Col, Image, InputGroup, FormControl, Button } from 'rea
 import { productSearch } from "../../Redux/Actions/productAction";
 import imagen from '../../Images/carrito.png';
 import lupaIcon from '../../Images/lupa.png';
-//import './homeWithSearchBox.css';
+
+
 
 export default function HomeWithSearchBox() {
     const dispatch = useDispatch();
@@ -15,8 +16,8 @@ export default function HomeWithSearchBox() {
     const [product, setProduct] = useState("");
 
     const handleInput = (e) => {
-        e.preventDefault()
-        setProduct(e.target.value)
+        e.preventDefault();
+        setProduct(e.target.value);        
     }
 
     const handleSubmit = (e) => {
@@ -65,26 +66,5 @@ export default function HomeWithSearchBox() {
                 </Row>
             </Container>
         </>
-
-
-        /* 
-        <div className="container">
-            <div className="row">
-                <div className="food-car"></div>
-            </div>
-            <div className="row">
-                <h1>Bazar Online</h1>
-            </div>
-            <div className="row">
-                <div className="search-container">
-                    <input type="text" placeholder="laptops, smartphones, ..." className="search-box" onChange={handleInput}/>
-                    <div className="search-icon"></div>
-                </div>
-            </div>
-            <div className="row">
-                <button className="search-button" onClick={handleSubmit}>Buscar</button>
-            </div>
-        </div>
-        */
     )
 }
