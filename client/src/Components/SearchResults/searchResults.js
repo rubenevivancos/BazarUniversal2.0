@@ -27,17 +27,18 @@ export default function SearchResults() {
         return(
             <>
                 <Container>
-                    <Row className="mb-1">
+                    <Row>
                         <Col>
                             <InputGroup className="mb-4">
-                                <Image src={imagen} style={{ width: "30px" }}/>
+                                <Image src={imagen} style={{ width: "50px" }} className="mt-3 mb-3"/>
                                 <FormControl
                                     placeholder="smartphones, laptops..."
                                     aria-label="Búsqueda"
                                     aria-describedby="basic-addon2"
                                     onChange={handleInput}
+                                    className="m-3"
                                 />
-                                <img src={lupaIcon} alt="Lupa" />
+                                <img src={lupaIcon} alt="Lupa" className="mt-3 mb-3"/>
                             </InputGroup>
                         </Col>
                     </Row>
