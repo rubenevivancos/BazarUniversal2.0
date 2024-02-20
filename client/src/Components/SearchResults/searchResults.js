@@ -27,35 +27,35 @@ export default function SearchResults() {
         return(
             <>
                 <Container>
-                    <Row>
-                        <Col>
-                            <InputGroup className="mb-4">
-                                <Image src={imagen} style={{ width: "50px" }} className="mt-3 mb-3"/>
+                    <Row className="mb-4">
+                        <Col style={{ border: "2px solid black" }}>
+                            <InputGroup>
+                                <Image src={imagen} style={{ width: "50px" }}/>
+                                <InputGroup.Text> </InputGroup.Text>
                                 <FormControl
                                     placeholder="smartphones, laptops..."
                                     aria-label="Búsqueda"
                                     aria-describedby="basic-addon2"
                                     onChange={handleInput}
-                                    className="m-3"
                                 />
-                                <img src={lupaIcon} alt="Lupa" className="mt-3 mb-3"/>
+                                <Image src={lupaIcon} alt="Lupa"/>
                             </InputGroup>
                         </Col>
                     </Row>
                     <Row className="mb-4">
-                        <Col className="text-center">
+                        <Col className="text-center" style={{ border: "2px solid black" }}>
                             <div>Resultados de la busqueda de " {productToSearch} ": {listProducts.length}</div>
                         </Col>
                     </Row>
                     <Row className="mb-4 text-center">
-                        <Col>
+                        <Col style={{ border: "2px solid black" }}>
                             {categoriesWithCount.map((cat) => (
                                 <span key={cat.category} className="bg-danger p-2 m-2">{cat.category} - {cat.count}</span>
                             ))}
                         </Col>
                     </Row>
-                    <Row className="mb-4">
-                        <Col className="text-center">
+                    <Row>
+                        <Col className="text-center" style={{ border: "2px solid black" }}>
                             <div>
                                 { listProducts.map( product => <Link to={"/items/"+product.id} key={product.id}><Product product={product} /></Link>) }
                             </div>
