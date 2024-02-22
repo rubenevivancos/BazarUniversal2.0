@@ -55,9 +55,9 @@ export default function SearchResults() {
     if(listProducts.length){
         return(
             <>
-                <Container fluid className="py-4" style={{ overflowY: 'auto', maxHeight: '90vh' }}>
-                    <Row className="mb-4 justify-content-left align-items-left">
-                        <Col xs={12} md={10}>
+                <Container fluid style={{ maxHeight: '90vh', maxWidth: '90vh', overflowY: 'auto' }}>
+                    <Row className="mb-4">
+                        <Col style={{ border: "2px solid black" }}>
                             <InputGroup>
                                 <Image src={imagen} style={{ width: "50px" }}/>
                                 <InputGroup.Text> </InputGroup.Text>
@@ -71,17 +71,24 @@ export default function SearchResults() {
                             </InputGroup>
                         </Col>
                     </Row>
-                    <Row className="mb-4 justify-content-left">
-                        <Col xs={12} md={10} className="text-left">
+                    <Row className="mb-4">
+                        <Col className="text-left" style={{ border: "2px solid black" }}>
                             <div>Resultados de la busqueda de " {productToSearch} ": {listProducts.length}</div>
                         </Col>
                     </Row>
                     <Row className="mb-4 text-left">                        
-                        {categoriesWithCount.map((cat, index) => (
-                            <Col key={index} xs={6} md={6} lg={4} className="mb-2">
-                                <span className="p-1 me-2" style={{ backgroundColor: generateColor(cat.category) }}>{cat.category} - {cat.count}</span>
-                            </Col>
-                        ))}
+                        <Col style={{ border: "2px solid black" }} className="d-flex"> {/*d-flex: hace que la columna modifique su altura segun lo que contenga */}
+                            {categoriesWithCount.map((cat) => (
+                                <span key={cat.category} className="me-2 p-1" style={{backgroundColor: generateColor(cat.category)}}>{cat.category} - {cat.count}</span>
+                            ))}
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col className="text-center" style={{ border: "2px solid black" }}>
+                            <div>
+                                { listProducts.map( product => <Link to={"/items/"+product.id} key={product.id}><Product product={product} /></Link>) }
+                            </div>
+                        </Col>
                     </Row>
                 </Container>
             </>
