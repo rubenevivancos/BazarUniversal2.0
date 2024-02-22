@@ -83,6 +83,13 @@ export default function SearchResults() {
                             </Col>
                         ))}
                     </Row>
+                    <Row>
+                        <Col className="text-center" style={{ border: "2px solid black" }}>
+                            <div>
+                                { listProducts.map( product => <Link to={"/items/"+product.id} key={product.id}><Product product={product} /></Link>) }
+                            </div>
+                        </Col>
+                    </Row>
                 </Container>
             </>
         )
