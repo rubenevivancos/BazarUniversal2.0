@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Image, InputGroup, FormControl, Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 import Product from "../Product/product.js";
@@ -23,10 +24,38 @@ export default function SearchResults() {
     const productToSearch = useSelector((state) => state.productReducer.productToSearch);
     const categoriesWithCount = useSelector((state) => state.productReducer.categoriesWithCount);
 
+    function generateColor(category) {
+        let color = "#";
+        switch (category) {
+            case "smartphones":
+                color = "#FFC0CB"; //Rosado claro
+                break;
+            case "laptops":
+                color = "#4285F4"; //Celeste
+                break;
+            case "fragrances":
+                color = "#90EE90"; //Verde claro
+                break;
+            case "skincare":
+                color = "#FFFF00"; //Amarillo
+                break;
+            case "groceries":
+                color = "#800080"; //Morado
+                break;
+            case "home-decoration":
+                color = "#D2B48C"; //Beige
+                break;
+            default:
+              color = "#B0E0E6"; //Azul polvo
+        }
+        console.log("El color es --> " + color);
+        return color;
+      }
+
     if(listProducts.length){
         return(
             <>
-                <Container>
+                <Container fluid style={{ maxHeight: '90vh', maxWidth: '90vh', overflowY: 'auto' }}>
                     <Row className="mb-4">
                         <Col style={{ border: "2px solid black" }}>
                             <InputGroup>
@@ -43,14 +72,14 @@ export default function SearchResults() {
                         </Col>
                     </Row>
                     <Row className="mb-4">
-                        <Col className="text-center" style={{ border: "2px solid black" }}>
+                        <Col className="text-left" style={{ border: "2px solid black" }}>
                             <div>Resultados de la busqueda de " {productToSearch} ": {listProducts.length}</div>
                         </Col>
                     </Row>
-                    <Row className="mb-4 text-center">
-                        <Col style={{ border: "2px solid black" }}>
+                    <Row className="mb-4 text-left">                        
+                        <Col style={{ border: "2px solid black" }} className="d-flex"> {/*d-flex: hace que la columna modifique su altura segun lo que contenga */}
                             {categoriesWithCount.map((cat) => (
-                                <span key={cat.category} className="bg-danger p-2 m-2">{cat.category} - {cat.count}</span>
+                                <span key={cat.category} className="me-2 p-1" style={{backgroundColor: generateColor(cat.category)}}>{cat.category} - {cat.count}</span>
                             ))}
                         </Col>
                     </Row>
