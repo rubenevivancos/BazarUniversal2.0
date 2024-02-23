@@ -65,6 +65,7 @@ export default function SearchResults() {
                                     placeholder="smartphones, laptops..."
                                     aria-label="Búsqueda"
                                     aria-describedby="basic-addon2"
+                                    value={productToSearch}
                                     onChange={handleInput}
                                 />
                                 <Image src={lupaIcon} alt="Lupa"/>

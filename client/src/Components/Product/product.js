@@ -18,7 +18,7 @@ export default function Product({product}) {
                     <h2 className="font-weight-bold">{product.title}</h2>
                     <p>{product.description}</p>
                     <div>
-                        <span>{product.price}</span>
+                        <span>$ {product.price}</span>
                         <CalificacionEstrellas calificacion={product.rating} />
                     </div>
                 </Col>
