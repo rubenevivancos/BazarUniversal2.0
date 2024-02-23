@@ -55,7 +55,7 @@ export default function SearchResults() {
     if(listProducts.length){
         return(
             <>
-                <Container fluid className="py-4" style={{ overflowY: 'auto', maxHeight: '90vh' }}>
+                <Container fluid className="py-4" style={{ overflowY: 'auto', maxHeight: '90vh', maxWidth: '50vh' }}>
                     <Row className="mb-4 justify-content-left align-items-left">
                         <Col xs={12} md={10}>
                             <InputGroup>

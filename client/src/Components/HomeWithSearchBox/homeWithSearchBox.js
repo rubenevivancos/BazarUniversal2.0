@@ -33,10 +33,10 @@ export default function HomeWithSearchBox() {
 
     return(
         <>
-            <Container>
+            <Container fluid style={{ maxHeight: '90vh', maxWidth: '40vh' }}>
                 <Row className="mb-4">
                     <Col className="text-center">
-                        <Image src={imagen} style={{ width: "300px" }}/>
+                        <Image src={imagen} style={{ width: "200px" }}/>
                     </Col>
                 </Row>
                 <Row className="mb-4">
@@ -45,7 +45,7 @@ export default function HomeWithSearchBox() {
                     </Col>
                 </Row>
                 <Row className="mb-4 justify-content-center">
-                    <Col xs={8} lg={6} className="text-center"> {/* Utilizamos lg=6 para que ocupe la mitad del ancho en pantallas grandes */}
+                    <Col  className="text-center"> {/* Utilizamos lg=6 para que ocupe la mitad del ancho en pantallas grandes */}
                         <InputGroup>
                             <FormControl
                                 placeholder="smartphones, laptops..."

@@ -36,19 +36,19 @@ export default function Product({product}) {
     };
 
     return(
-        <Container>
-            <Row>
-                <Col>
-                    <img src={product.images[0]} alt={product.title} width="150" height="150"/>
+        <Container className="my-4"> {/* Agregamos my-4 para agregar margen arriba y abajo */}
+            <Row className="align-items-center">
+                {/* Columna para la imagen */}
+                <Col xs={12} lg={5} className="mb-4 mb-lg-0">
+                    <img src={product.images[0]} alt={product.title} className="img-fluid" />
                 </Col>
-                <Col>
+                {/* Columna para el contenido */}
+                <Col xs={12} lg={7}>
                     <h2 className="font-weight-bold">{product.title}</h2>
-                    <span>{product.description}</span>
+                    <p>{product.description}</p>
                     <div>
                         <span>{product.price}</span>
-                        <span>
-                            {renderStars()}
-                        </span>
+                        <span>{renderStars()}</span>
                     </div>
                 </Col>
             </Row>
