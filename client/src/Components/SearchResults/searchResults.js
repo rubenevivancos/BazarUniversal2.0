@@ -87,7 +87,7 @@ export default function SearchResults() {
                     <Row>
                         <Col className="text-left">
                             <div>
-                                { listProducts.map( product => <Link to={"/items/"+product.id} key={product.id}><Product product={product} /></Link>) }
+                                { listProducts.map( product => <Link to={"/items/"+product.id} key={product.id} style={{ textDecoration: 'none' }}><Product product={product} /></Link>) }
                             </div>
                         </Col>
                     </Row>
