@@ -14,11 +14,11 @@ export default function Product({product}) {
                     <img src={product.images[0]} alt={product.title} className="img-fluid" />
                 </Col>
                 {/* Columna para el contenido */}
-                <Col xs={12} lg={7}>
+                <Col xs={12} lg={7} className="text-dark">
                     <h2 className="font-weight-bold">{product.title}</h2>
                     <p>{product.description}</p>
-                    <div>
-                        <span>$ {product.price}</span>
+                    <div className="d-flex align-items-center">
+                        <span className="fw-bold me-4">$ {product.price}</span>
                         <CalificacionEstrellas calificacion={product.rating} />
                     </div>
                 </Col>
