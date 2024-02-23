@@ -1,4 +1,6 @@
-import "./product.css";
+import { Container, Row, Col, Image, InputGroup, FormControl } from 'react-bootstrap';
+
+
 
 export default function Product({product}) {
 
@@ -34,20 +36,22 @@ export default function Product({product}) {
     };
 
     return(
-        <div className="product-container">
-            <div className="product-image">
-                <img src={product.images[0]} alt={product.title} width="150" height="150"/>
-            </div>
-            <div className="product-details">
-                <div className="product-title">{product.title}</div>
-                <div className="product-description">{product.description}</div>
-                <div className="product-price-and-rating">
-                    <div className="product-price">{product.price}</div>
-                    <div className="product-rating">
-                        {renderStars()}
+        <Container>
+            <Row>
+                <Col>
+                    <img src={product.images[0]} alt={product.title} width="150" height="150"/>
+                </Col>
+                <Col>
+                    <h2 className="font-weight-bold">{product.title}</h2>
+                    <span>{product.description}</span>
+                    <div>
+                        <span>{product.price}</span>
+                        <span>
+                            {renderStars()}
+                        </span>
                     </div>
-                </div>
-            </div>
-        </div>
+                </Col>
+            </Row>
+        </Container>
     )
 }

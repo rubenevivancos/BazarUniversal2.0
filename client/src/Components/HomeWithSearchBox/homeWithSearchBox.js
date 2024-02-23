@@ -35,8 +35,8 @@ export default function HomeWithSearchBox() {
         <>
             <Container>
                 <Row className="mb-4">
-                    <Col>
-                        <Image src={imagen} className="img-centered" style={{ width: "300px" }}/>
+                    <Col className="text-center">
+                        <Image src={imagen} style={{ width: "300px" }}/>
                     </Col>
                 </Row>
                 <Row className="mb-4">
@@ -44,9 +44,9 @@ export default function HomeWithSearchBox() {
                         <h1 className="text-center">Bazar Universal</h1>
                     </Col>
                 </Row>
-                <Row style={{ justifyContent: "center" }}>
-                    <Col>
-                        <InputGroup className="mb-4">
+                <Row className="mb-4 justify-content-center">
+                    <Col xs={8} lg={6} className="text-center"> {/* Utilizamos lg=6 para que ocupe la mitad del ancho en pantallas grandes */}
+                        <InputGroup>
                             <FormControl
                                 placeholder="smartphones, laptops..."
                                 aria-label="Búsqueda"

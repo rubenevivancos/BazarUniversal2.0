@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
-import { Container, Row, Col, Image, InputGroup, FormControl, Button } from 'react-bootstrap';
+import { Container, Row, Col, Image, InputGroup, FormControl } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -84,7 +84,7 @@ export default function SearchResults() {
                         ))}
                     </Row>
                     <Row>
-                        <Col className="text-center" style={{ border: "2px solid black" }}>
+                        <Col className="text-left">
                             <div>
                                 { listProducts.map( product => <Link to={"/items/"+product.id} key={product.id}><Product product={product} /></Link>) }
                             </div>
