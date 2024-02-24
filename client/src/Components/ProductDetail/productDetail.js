@@ -19,7 +19,7 @@ export default function ProductDetail() {
 
     if(product !== null){
         return(
-            <div >
+            <Container fluid className="py-4 overflow-auto vh-90" style={{ maxWidth: '50vh' }}>
                 <div >
                     <div >
                         <input type="text" placeholder="laptops, smartphones, ..."/>
@@ -44,7 +44,7 @@ export default function ProductDetail() {
                         <button>Comprar</button>
                     </div>
                 </div>
-            </div>
+            </Container>
         )
     }
 }
