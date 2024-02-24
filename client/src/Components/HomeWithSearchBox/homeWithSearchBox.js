@@ -33,7 +33,7 @@ export default function HomeWithSearchBox() {
 
     return(
         <>
-            <Container fluid style={{ maxHeight: '90vh', maxWidth: '40vh' }}>
+            <Container fluid className="py-4 vh-90" style={{ maxWidth: '40vh' }}>
                 <Row className="mb-4">
                     <Col className="text-center">
                         <Image src={imagen} style={{ width: "200px" }}/>

@@ -48,14 +48,13 @@ export default function SearchResults() {
             default:
               color = "#B0E0E6"; //Azul polvo
         }
-        console.log("El color es --> " + color);
         return color;
       }
 
     if(listProducts.length){
         return(
             <>
-                <Container fluid className="py-4" style={{ overflowY: 'auto', maxHeight: '90vh', maxWidth: '50vh' }}>
+                <Container fluid className="py-4 overflow-auto vh-90" style={{ maxWidth: '50vh' }}>
                     <Row className="mb-4 justify-content-left align-items-left">
                         <Col xs={12} md={10}>
                             <InputGroup>
@@ -77,12 +76,12 @@ export default function SearchResults() {
                             <div>Resultados de la busqueda de " {productToSearch} ": {listProducts.length}</div>
                         </Col>
                     </Row>
-                    <Row className="mb-4 text-left">                        
-                        {categoriesWithCount.map((cat, index) => (
-                            <Col key={index} xs={6} md={6} lg={4} className="mb-2">
-                                <span className="p-1 me-2" style={{ backgroundColor: generateColor(cat.category) }}>{cat.category} - {cat.count}</span>
-                            </Col>
-                        ))}
+                    <Row className="mb-4">                        
+                        <Col className="d-flex flex-wrap justify-content-start">
+                            {categoriesWithCount.map((cat, index) => (                            
+                                <span key={index} className="me-2 p-1 mb-1" style={{ backgroundColor: generateColor(cat.category) }}>{cat.category} - {cat.count}</span>                            
+                            ))}
+                        </Col>
                     </Row>
                     <Row>
                         <Col className="text-left">
