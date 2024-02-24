@@ -1,4 +1,4 @@
-import { Container, Row, Col, Image, InputGroup, FormControl } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import CalificacionEstrellas from './stars';
 
 
