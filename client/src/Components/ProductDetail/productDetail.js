@@ -45,15 +45,15 @@ export default function ProductDetail() {
                         </InputGroup>
                     </Col>
                 </Row>
-                <Row>
+                <Row style={{ border: '1px solid black' }}>
                     {/* Columna para la imagen */}
-                    <Col>
-                        <Image src={product.images[0]} alt={product.title} className="img-fluid" />
+                    <Col className="d-flex justify-content-center align-items-center">
+                        <Image src={product.images[0]} alt={product.title} className="img-fluid"/>
                     </Col>
                     {/* Columna para el carrusel de imagenes */}
-                    <Col className="overflow-auto" style={{ maxHeight: '20vh' }}>
+                    <Col className="d-flex flex-column align-items-start overflow-auto" style={{ maxHeight: '50vh' }}>
                         {product.images.map((image, index) => (
-                            <Image key={index} src={image} className="img-fluid mb-2" />
+                            <Image key={index} src={image} className="img-fluid mt-2 mb-2" style={{ maxHeight: '30vh' }}/>
                         ))}
                     </Col>
                 </Row>

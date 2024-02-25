@@ -53,7 +53,7 @@ export default function SearchResults() {
     if(listProducts.length){
         return(
             <>
-                <Container fluid className="py-4 overflow-auto" style={{ maxHeight: '90vh', maxWidth: '50vh' }}>
+                <Container fluid className="py-4" style={{ maxHeight: '90vh', maxWidth: '50vh' }}>
                     <Row className="mb-4 justify-content-left align-items-left">
                         <Col xs={12} md={10}>
                             <InputGroup>
@@ -83,7 +83,7 @@ export default function SearchResults() {
                         </Col>
                     </Row>
                     <Row>
-                        <Col className="text-left">
+                        <Col className="text-left overflow-auto" style={{ maxHeight: '60vh' }}>
                             <div>
                                 { listProducts.map( product => <Link to={"/items/"+product.id} key={product.id} style={{ textDecoration: 'none' }}><Product product={product} /></Link>) }
                             </div>
