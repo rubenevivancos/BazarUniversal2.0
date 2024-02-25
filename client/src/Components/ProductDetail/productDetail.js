@@ -51,8 +51,10 @@ export default function ProductDetail() {
                         <Image src={product.images[0]} alt={product.title} className="img-fluid" />
                     </Col>
                     {/* Columna para el carrusel de imagenes */}
-                    <Col>
-
+                    <Col className="overflow-auto" style={{ maxHeight: '20vh' }}>
+                        {product.images.map((image, index) => (
+                            <Image key={index} src={image} className="img-fluid mb-2" />
+                        ))}
                     </Col>
                 </Row>
             </Container>
