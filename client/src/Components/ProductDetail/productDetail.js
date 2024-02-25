@@ -69,35 +69,3 @@ export default function ProductDetail() {
         )
     }
 }
-
-/*
-            <Container fluid className="py-4 overflow-auto vh-90" style={{ maxWidth: '50vh' }}>
-                <Row className="mb-4 justify-content-left align-items-left">
-                    <Col>
-                        <InputGroup>
-                            <Image src={imagen} style={{ width: "50px" }}/>
-                            <InputGroup.Text> </InputGroup.Text>
-                            <FormControl
-                                placeholder="smartphones, laptops..."
-                                aria-label="Búsqueda"
-                                aria-describedby="basic-addon2"
-                                onChange={handleInput}
-                            />
-                            <Image src={lupaIcon} alt="Lupa"/>
-                        </InputGroup>
-                    </Col>
-                </Row>
-                <Row style={{ border: '1px solid black'}}>
-                    {/* Columna para la imagen * /}
-                    <Col className="d-flex justify-content-center align-items-center">
-                        <Image src={product.images[0]} alt={product.title} className="img-fluid"/>
-                    </Col>
-                    {/* Columna para el carrusel de imagenes * /}
-                    <Col className="d-flex flex-column align-items-start overflow-auto" style={{ maxHeight: '50vh' }}>
-                        {product.images.map((image, index) => (
-                            <Image key={index} src={image} className="img-fluid mt-2 mb-2" style={{ maxHeight: '20vh' }}/>
-                        ))}
-                    </Col>
-                </Row>
-            </Container>
-*/
