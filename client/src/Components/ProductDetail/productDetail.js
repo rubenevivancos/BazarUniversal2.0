@@ -27,12 +27,11 @@ export default function ProductDetail() {
 
     const product = useSelector((state) => state.productReducer.productDetail);
 
-
     if(product !== null){
         return(
             <Container fluid className="py-4 overflow-auto vh-90" style={{ maxWidth: '50vh' }}>
                 <Row className="mb-4 justify-content-left align-items-left">
-                    <Col xs={12} md={10}>
+                    <Col>
                         <InputGroup>
                             <Image src={imagen} style={{ width: "50px" }}/>
                             <InputGroup.Text> </InputGroup.Text>
@@ -44,6 +43,16 @@ export default function ProductDetail() {
                             />
                             <Image src={lupaIcon} alt="Lupa"/>
                         </InputGroup>
+                    </Col>
+                </Row>
+                <Row>
+                    {/* Columna para la imagen */}
+                    <Col>
+                        <Image src={product.images[0]} alt={product.title} className="img-fluid" />
+                    </Col>
+                    {/* Columna para el carrusel de imagenes */}
+                    <Col>
+
                     </Col>
                 </Row>
             </Container>

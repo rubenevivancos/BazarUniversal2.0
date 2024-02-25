@@ -1,4 +1,4 @@
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Image } from 'react-bootstrap';
 import CalificacionEstrellas from './stars';
 
 
@@ -11,7 +11,7 @@ export default function Product({product}) {
             <Row className="align-items-center">
                 {/* Columna para la imagen */}
                 <Col xs={12} lg={5} className="mb-4 mb-lg-0">
-                    <img src={product.images[0]} alt={product.title} className="img-fluid" />
+                    <Image src={product.images[0]} alt={product.title} className="img-fluid" />
                 </Col>
                 {/* Columna para el contenido */}
                 <Col xs={12} lg={7} className="text-dark">

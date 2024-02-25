@@ -53,7 +53,7 @@ export default function HomeWithSearchBox() {
                                 aria-describedby="basic-addon2"
                                 onChange={handleInput}
                             />
-                            <img src={lupaIcon} alt="Lupa" />
+                            <Image src={lupaIcon} alt="Lupa" />
                         </InputGroup>
                     </Col>
                 </Row>
