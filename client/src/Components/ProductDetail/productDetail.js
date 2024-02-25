@@ -58,8 +58,11 @@ export default function ProductDetail() {
                             <Image 
                                 key={index} 
                                 src={image} 
-                                className={`img-fluid mt-2 mb-2 ${selectedImage === image ? 'selected' : ''}`}
-                                style={{ maxHeight: '20vh' }}
+                                className="img-fluid mt-2 mb-2" 
+                                style={{ 
+                                    maxHeight: '20vh', 
+                                    border: selectedImage === image ? '2px solid blue' : 'none' // Aplicar borde azul a la imagen seleccionada
+                                }}
                                 onClick={() => setSelectedImage(image)}
                             />
                         ))}
