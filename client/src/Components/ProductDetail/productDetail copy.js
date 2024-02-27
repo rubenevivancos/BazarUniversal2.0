@@ -24,19 +24,14 @@ export default function ProductDetail() {
     
 
     useEffect(() => {
-
         dispatch(getProductDetail(id));
-        if(product != null){
-            setSelectedImage(product.images[0]);
-        }
-
     }, [dispatch, id]);
 
     const product = useSelector((state) => state.productReducer.productDetail);
     
-    
 
     if(product !== null){
+        setSelectedImage(product.images[0]);
         return(
             <Container fluid className="py-4 overflow-auto vh-90" style={{ maxWidth: '50vh' }}>
                 <Row className="mb-4 justify-content-left align-items-left">
@@ -67,7 +62,7 @@ export default function ProductDetail() {
                                 src={image} 
                                 className="img-fluid mt-2 mb-2" 
                                 style={{ 
-                                    maxHeight: '20vh',
+                                    maxHeight: '20vh', 
                                     border: selectedImage === image ? '2px solid blue' : 'none' // Aplicar borde azul a la imagen seleccionada
                                 }}
                                 onClick={() => setSelectedImage(image)}
