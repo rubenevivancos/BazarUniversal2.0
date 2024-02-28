@@ -27,19 +27,14 @@ export default function ProductDetail() {
 
     useEffect(() => {
         dispatch(getProductDetail(id));
-        /*
-        if (product && product.images.length > 0) {
-            setSelectedImage(product.images[0]); // Establecer la primera imagen como seleccionada al cargar el componente
-        }*/
-
     }, [dispatch, id]);
     
 
     if(product !== null){
         return(
-            <Container fluid className="py-4 overflow-auto vh-90" style={{ maxWidth: '50vh' }}>
+            <Container fluid className="py-4 overflow-auto" style={{ maxHeight: '90vh', maxWidth: '50vh' }}>
                 <Row className="mb-4 justify-content-left align-items-left">
-                    <Col>
+                    <Col xs={12} md={10}>
                         <InputGroup>
                             <Image src={imagen} style={{ width: "50px" }}/>
                             <InputGroup.Text> </InputGroup.Text>

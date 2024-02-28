@@ -55,7 +55,7 @@ export default function SearchResults() {
             <>
                 <Container fluid className="py-4" style={{ maxHeight: '90vh', maxWidth: '50vh' }}>
                     <Row className="mb-4 justify-content-left align-items-left">
-                        <Col xs={12} md={10}>
+                        <Col>
                             <InputGroup>
                                 <Image src={imagen} style={{ width: "50px" }}/>
                                 <InputGroup.Text> </InputGroup.Text>
@@ -78,7 +78,13 @@ export default function SearchResults() {
                     <Row className="mb-4">                        
                         <Col className="d-flex flex-wrap justify-content-start">
                             {categoriesWithCount.map((cat, index) => (                            
-                                <span key={index} className="me-2 p-1 mb-1" style={{ backgroundColor: generateColor(cat.category) }}>{cat.category} - {cat.count}</span>                            
+                                <span 
+                                    key={index} 
+                                    className="me-2 p-1 mb-1 rounded" 
+                                    style={{ backgroundColor: generateColor(cat.category) }}
+                                >
+                                    {cat.category} - {cat.count}
+                                </span>
                             ))}
                         </Col>
                     </Row>
