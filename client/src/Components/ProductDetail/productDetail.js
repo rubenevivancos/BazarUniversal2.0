@@ -13,6 +13,7 @@ export default function ProductDetail() {
 
     const [productToSearch, setProductToSearch] = useState("");
     const [selectedImage, setSelectedImage] = useState("");
+    console.log("selectedImage --> " + selectedImage);
 
     const handleInput = (e) => {
         e.preventDefault();
@@ -24,12 +25,7 @@ export default function ProductDetail() {
     
 
     useEffect(() => {
-
         dispatch(getProductDetail(id));
-        if(product != null){
-            setSelectedImage(product.images[0]);
-        }
-
     }, [dispatch, id]);
 
     const product = useSelector((state) => state.productReducer.productDetail);
@@ -57,7 +53,7 @@ export default function ProductDetail() {
                 <Row style={{ border: '1px solid black'}}>
                     {/* Columna para la imagen */}
                     <Col className="d-flex justify-content-center align-items-center">
-                        <Image src={selectedImage} alt={product.title} className="img-fluid"/>
+                        <Image src={selectedImage ? selectedImage : setSelectedImage(product.images[0])} alt={product.title} className="img-fluid"/>
                     </Col>
                     {/* Columna para el carrusel de imagenes */}
                     <Col className="d-flex flex-column align-items-start overflow-auto" style={{ maxHeight: '50vh' }}>
