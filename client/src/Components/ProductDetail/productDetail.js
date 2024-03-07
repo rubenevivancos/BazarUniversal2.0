@@ -69,6 +69,11 @@ export default function ProductDetail() {
                         ))}
                     </Col>
                 </Row>
+                <Row>
+                    <Col>
+                        <h5>{product.title} - {product.brand}</h5>
+                    </Col>
+                </Row>
             </Container>
         )
     }else{
