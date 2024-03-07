@@ -49,7 +49,7 @@ export default function ProductDetail() {
                         </InputGroup>
                     </Col>
                 </Row>
-                <Row style={{ border: '1px solid black'}}>
+                <Row className="mb-4">
                     {/* Columna para la imagen */}
                     <Col className="d-flex justify-content-center align-items-center">
                         <Image src={selectedImage || product.images[0]} alt={product.title} className="img-fluid"/>
@@ -70,18 +70,23 @@ export default function ProductDetail() {
                         ))}
                     </Col>
                 </Row>
-                <Row>
-                    <Col>
-                        <h5>{product.title} - {product.brand}</h5>
+                <Row className="mb-2">
+                    <Col className="d-flex justify-content-center align-items-center">
+                        <h4>{product.title} - {product.brand}</h4>
                     </Col>
                 </Row>
-                <Row>
+                <Row className="mb-4">
                     <Col className="d-flex flex-column justify-content-center align-items-center">
-                        <h6>{product.price}$</h6>
+                        <h4>{product.price}$</h4>
                         <h6>{product.stock} disponibles</h6>
                     </Col>
                     <Col className="d-flex justify-content-center align-items-center">
                         <CalificacionEstrellas calificacion={product.rating} />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col className="d-flex justify-content-center align-items-center">
+                        <h6>{product.description}</h6>
                     </Col>
                 </Row>
             </Container>
