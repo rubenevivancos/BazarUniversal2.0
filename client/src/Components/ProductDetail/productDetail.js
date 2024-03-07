@@ -7,6 +7,7 @@ import { Container, Row, Col, Image, InputGroup, FormControl } from 'react-boots
 import { getProductDetail } from "../../Redux/Actions/productAction";
 import imagen from '../../Images/carrito.png';
 import lupaIcon from '../../Images/lupa.png';
+import CalificacionEstrellas from '../Product/stars';
 
 
 export default function ProductDetail() {
@@ -72,6 +73,15 @@ export default function ProductDetail() {
                 <Row>
                     <Col>
                         <h5>{product.title} - {product.brand}</h5>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col className="d-flex flex-column justify-content-center align-items-center">
+                        <h6>{product.price}$</h6>
+                        <h6>{product.stock} disponibles</h6>
+                    </Col>
+                    <Col className="d-flex justify-content-center align-items-center">
+                        <CalificacionEstrellas calificacion={product.rating} />
                     </Col>
                 </Row>
             </Container>
