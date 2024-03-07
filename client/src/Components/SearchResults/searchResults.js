@@ -53,7 +53,7 @@ export default function SearchResults() {
     if(listProducts.length){
         return(
             <>
-                <Container fluid className="py-4" style={{ maxHeight: '90vh', maxWidth: '50vh' }}>
+                <Container fluid className="py-4" style={{ maxHeight: '90vh', maxWidth: '50vh', backgroundColor: '#fdfd96' }}>
                     <Row className="mb-4 justify-content-left align-items-left">
                         <Col>
                             <InputGroup>
