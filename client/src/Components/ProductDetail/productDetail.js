@@ -8,6 +8,7 @@ import { getProductDetail } from "../../Redux/Actions/productAction";
 import imagen from '../../Images/carrito.png';
 import lupaIcon from '../../Images/lupa.png';
 import CalificacionEstrellas from '../Product/stars';
+import GoBack from '../GoBack/goBack';
 
 
 export default function ProductDetail() {
@@ -34,6 +35,9 @@ export default function ProductDetail() {
     if(product !== null){
         return(
             <Container fluid className="py-4 overflow-auto" style={{ maxHeight: '90vh', maxWidth: '50vh', backgroundColor: '#fdfd96' }}>
+                <Row className="mb-2">
+                    <GoBack/>
+                </Row>
                 <Row className="mb-4 justify-content-left align-items-left">
                     <Col>
                         <InputGroup>
