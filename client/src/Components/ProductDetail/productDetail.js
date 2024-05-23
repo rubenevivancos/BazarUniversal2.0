@@ -35,7 +35,7 @@ export default function ProductDetail() {
     if(product !== null){
         return(
             <div className="d-flex justify-content-center align-items-start" style={{ height: '100vh', backgroundColor: '#fdfd96' }}>
-                <Container fluid className="py-4 overflow-auto" style={{ maxHeight: '90vh', maxWidth: '50vh'}}>
+                <Container fluid className="py-4" style={{ height: '100vh', maxWidth: '50vh'}}>
                     <Row className="mb-2">
                         <GoBack/>
                     </Row>
